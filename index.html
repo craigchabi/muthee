@@ -3,11 +3,10 @@
    <head>
       <title>Akan Name Generator</title>
       <link rel="stylesheet" href="css/bootstrap.css">
-      <link rel="stylesheet" href="script/script.js">
    </head>
    <body>
       <div class="container">
-         <div class="row">
+         <div id="flex" class="row">
             <div class="jumbotron"> 
                <h1>The Akan Name Generator</h1>
                <p>This is a web application that is supposed to find out the day of the week you were born as well as assigning a ghananian name that depends on the day you were born. This information can be acquired using your date of birth as well as your sex.</p>
@@ -37,19 +36,30 @@
                </ul>               
             </div>
             <h2>To get the Akan name and Day of Birth. Fill in you date of birth and your gender as well</h2>
-            <div class="form">
-               <label>Day</label><br>
-               <input pe="text" id="day" placeholder="DD" required><br>
-               <label>Month</label><br>
-               <input type="text" id="month" placeholder="MM" required><br>
-               <label>Year</label><br>
-               <input type="text" id="year" placeholder="YYYY" required><br>
-               <label>Gender</label><br>
-               <input type="radio" name="gender" id="gender" value="male" checked> Male<br>
-               <input type="radio" name="gender" id="gender" value="female" checked> Female<br><br>
+            <div class="jumbotron col-md-6">
+               <tydiv class="form">
+                  <label>Day</label><br>
+                  <input pe="text" id="day" placeholder="DD" required><br>
+                  <label>Month</label><br>
+                  <input type="text" id="month" placeholder="MM" required><br>
+                  <label>Year</label><br>
+                  <input type="text" id="year" placeholder="YYYY" required><br>
+                  <label>Gender</label><br>
+                  <input type="radio" name="gender" id="gender" value="male" checked> Male<br>
+                  <input type="radio" name="gender" id="gender" value="female" checked> Female<br>
+               </div>
             </div>
-         </div>
-         
+            <br>
+            <br>
+            <div class="sbmt">
+               <a href="#result"><button type="button" name="button" class="btn btn-primary mb-2"
+                   onclick="submition();">Submit</button></a>
+            </div>
+            <div id="last">
+               <p id="final"></p>
+            </div>
+         </div> 
       </div>
+      <script src="script/script.js"></script>
    </body>
 </html>
